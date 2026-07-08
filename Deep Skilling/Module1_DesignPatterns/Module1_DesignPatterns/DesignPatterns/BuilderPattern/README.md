@@ -1,3 +1,0 @@
-# BuilderPattern
-
-Demonstrates Builder pattern.
