@@ -1,3 +1,0 @@
-# StrategyPattern
-
-Demonstrates Strategy pattern.

@@ -1,3 +1,0 @@
-# ProxyPattern
-
-Demonstrates Proxy pattern.
