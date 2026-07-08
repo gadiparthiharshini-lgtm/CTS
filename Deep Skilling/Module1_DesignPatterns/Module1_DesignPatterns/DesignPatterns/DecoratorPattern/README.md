@@ -1,0 +1,3 @@
+# DecoratorPattern
+
+Demonstrates Decorator pattern.
