@@ -1,0 +1,3 @@
+# SingletonPattern
+
+Demonstrates Singleton pattern.
