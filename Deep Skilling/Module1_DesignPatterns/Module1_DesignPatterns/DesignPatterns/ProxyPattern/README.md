@@ -1,0 +1,3 @@
+# ProxyPattern
+
+Demonstrates Proxy pattern.

@@ -1,0 +1,3 @@
+# AdapterPattern
+
+Demonstrates Adapter pattern.
