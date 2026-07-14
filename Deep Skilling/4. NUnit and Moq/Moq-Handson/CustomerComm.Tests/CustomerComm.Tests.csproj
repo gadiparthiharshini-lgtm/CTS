@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Test platform for `dotnet test` / Visual Studio Test Explorer -->
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <!-- NUnit 4.x test framework -->
+    <PackageReference Include="NUnit" Version="4.2.2" />
+    <!-- Adapter so VSTest/dotnet test can run NUnit tests -->
+    <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
+    <PackageReference Include="NUnit.Analyzers" Version="4.3.0" />
+    <!-- Moq mocking framework -->
+    <PackageReference Include="Moq" Version="4.20.72" />
+    <PackageReference Include="coverlet.collector" Version="6.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Reference to the library containing the code under test -->
+    <ProjectReference Include="..\CustomerCommLib\CustomerCommLib.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Test platform that allows the project to be discovered/run by `dotnet test` and Visual Studio Test Explorer -->
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <!-- NUnit 4.x test framework -->
+    <PackageReference Include="NUnit" Version="4.2.2" />
+    <!-- Adapter that lets VSTest/dotnet test execute NUnit tests -->
+    <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
+    <!-- Source generators for NUnit analyzers (optional but recommended) -->
+    <PackageReference Include="NUnit.Analyzers" Version="4.3.0" />
+    <PackageReference Include="coverlet.collector" Version="6.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Reference to the library under test -->
+    <ProjectReference Include="..\CalcLibrary\CalcLibrary.csproj" />
+  </ItemGroup>
+
+</Project>

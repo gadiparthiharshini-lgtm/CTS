@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <!--
+    System.Net.Mail (SmtpClient / MailMessage) ships with the .NET 8 base class
+    library, so no extra NuGet package is required. SmtpClient is obsolete in
+    modern .NET but is used here to follow the hands-on exercise document.
+  -->
+
+</Project>
