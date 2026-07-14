@@ -1,3 +1,0 @@
-# ObserverPattern
-
-Demonstrates Observer pattern.

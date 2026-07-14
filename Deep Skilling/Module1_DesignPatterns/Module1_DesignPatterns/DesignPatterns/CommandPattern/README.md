@@ -1,3 +1,0 @@
-# CommandPattern
-
-Demonstrates Command pattern.
