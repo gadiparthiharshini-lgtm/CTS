@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>WebApi_Handson</RootNamespace>
+    <AssemblyName>WebApi_Handson</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Hands-on 2: Swagger / OpenAPI -->
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <!-- Hands-on 5: JWT bearer authentication -->
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.8" />
+  </ItemGroup>
+
+</Project>
