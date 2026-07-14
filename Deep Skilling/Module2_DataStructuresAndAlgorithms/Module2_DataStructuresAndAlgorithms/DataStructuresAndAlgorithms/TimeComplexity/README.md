@@ -1,3 +1,0 @@
-# TimeComplexity
-
-Big-O examples

@@ -1,3 +1,0 @@
-# Transactions
-
-ACID, COMMIT, ROLLBACK, SAVEPOINT
