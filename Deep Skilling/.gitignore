@@ -1,0 +1,23 @@
+# .NET build artifacts
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+
+# Visual Studio
+.vs/
+*.userprefs
+
+# Rider / VS Code
+.idea/
+.vscode/
+
+# Test results
+TestResults/
+*.trx
+
+# NuGet
+*.nupkg
+packages/
