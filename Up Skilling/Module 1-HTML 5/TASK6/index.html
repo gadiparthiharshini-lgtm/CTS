@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Feedback</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        img {
+            width: 200px;
+            cursor: pointer;
+        }
+
+        .enlarged {
+            width: 400px;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Community Event Feedback Form</h2>
+
+    <label>Phone Number:</label>
+    <input type="text" id="phone" onblur="validatePhone()">
+    <span id="phoneError"></span>
+
+    <br><br>
+
+    <label>Select Event:</label>
+    <select id="eventType" onchange="showFee()">
+        <option value="">Choose Event</option>
+        <option value="100">Music Festival</option>
+        <option value="200">Workshop</option>
+        <option value="150">Sports Day</option>
+    </select>
+
+    <p id="fee"></p>
+
+    <label>Feedback:</label><br>
+
+    <textarea id="feedback"
+              rows="5"
+              cols="40"
+              onkeyup="countCharacters()"></textarea>
+
+    <p>Character Count: <span id="count">0</span></p>
+
+    <button onclick="submitForm()">Submit</button>
+
+    <h3>Double-click the image to enlarge it</h3>
+
+    <img src="event.jpg"
+         alt="Community Event"
+         id="eventImage"
+         ondblclick="enlargeImage()">
+
+    <script>
+        function validatePhone() {
+            const phone = document.getElementById("phone").value;
+            const error = document.getElementById("phoneError");
+
+            if (!/^[0-9]{10}$/.test(phone)) {
+                error.textContent = " Enter a valid 10-digit phone number";
+            } else {
+                error.textContent = "";
+            }
+        }
+
+        function showFee() {
+            const fee = document.getElementById("eventType").value;
+            document.getElementById("fee").textContent =
+                fee ? `Event Fee: ₹${fee}` : "";
+        }
+
+        function submitForm() {
+            alert("Feedback submitted successfully!");
+        }
+
+        function enlargeImage() {
+            document.getElementById("eventImage")
+                .classList.toggle("enlarged");
+        }
+
+        function countCharacters() {
+            const length =
+                document.getElementById("feedback").value.length;
+
+            document.getElementById("count").textContent = length;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome DevTools Debugging</title>
+</head>
+
+<body>
+
+    <h2>Debugging Example</h2>
+
+    <button onclick="calculateTotal()">
+        Calculate Total
+    </button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculateTotal() {
+
+            let ticketPrice = 100;
+            let quantity = 3;
+
+            console.log("Ticket Price:", ticketPrice);
+            console.log("Quantity:", quantity);
+
+            debugger;
+
+            let total = ticketPrice * quantity;
+
+            console.log("Total:", total);
+
+            document.getElementById("result")
+                .textContent =
+                `Total Amount: ₹${total}`;
+        }
+    </script>
+
+</body>
+</html>
