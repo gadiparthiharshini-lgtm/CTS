@@ -1,0 +1,17 @@
+{
+  "Jwt": {
+    "Key": "ThisIsASecretKeyForJwtToken",
+    "Issuer": "MyAuthServer",
+    "Audience": "MyApiUsers",
+    "DurationInMinutes": 60
+  },
+
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+
+  "AllowedHosts": "*"
+}
