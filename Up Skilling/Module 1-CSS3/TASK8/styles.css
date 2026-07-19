@@ -1,0 +1,303 @@
+/* ============================================================
+   Task 8: Box Model & Layout Control
+   Demonstrates: margin, padding, border, outline,
+   visibility: hidden vs display: none, box-sizing
+   ============================================================ */
+
+/* UNIVERSAL RESET – sets box-sizing for predictable layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;   /* padding and border included in element width */
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #eef2f7;
+  color: #333;
+  padding: 20px;            /* body padding */
+}
+
+/* ------------------------------------------------------------
+   HEADER
+   ------------------------------------------------------------ */
+#mainHeader {
+  background-color: #1a3c6e;
+  color: #fff;
+  /* Padding: top/bottom 25px, left/right 35px */
+  padding: 25px 35px;
+  /* Margin at bottom to push content down */
+  margin-bottom: 30px;
+  /* Border: none on header itself */
+  border-radius: 10px;
+}
+
+#mainHeader h1 {
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+
+#mainHeader p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+/* ------------------------------------------------------------
+   MAIN CONTAINER
+   ------------------------------------------------------------ */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------------------------
+   BOX DEMO SECTION
+   ------------------------------------------------------------ */
+.box-demo-section {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.box-demo-section h2 {
+  font-size: 1.4rem;
+  color: #1a3c6e;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #007BFF;
+}
+
+/* BOX MODEL VISUAL: this element visually shows all box model layers */
+.box-model-visual {
+  /* CONTENT: text inside */
+  background-color: #d6e8ff;         /* content area colour */
+  color: #1a3c6e;
+
+  /* PADDING: space between content and border */
+  padding: 30px;
+
+  /* BORDER: visible edge around the box */
+  border: 4px solid #007BFF;
+
+  /* MARGIN: space outside the border (separates from surroundings) */
+  margin: 20px;
+
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ------------------------------------------------------------
+   EVENTS SECTION
+   ------------------------------------------------------------ */
+.events-section {
+  margin-bottom: 25px;
+}
+
+.events-section h2 {
+  font-size: 1.4rem;
+  color: #1a3c6e;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #007BFF;
+}
+
+/* EVENT CARD – full box model properties applied */
+.eventCard {
+  background-color: #ffffff;
+
+  /* BORDER: solid with colour and width */
+  border: 2px solid #c5d3e0;
+  border-radius: 10px;
+
+  /* PADDING: inner spacing around the content */
+  padding: 20px 25px;
+
+  /* MARGIN: outer spacing between cards */
+  margin-bottom: 20px;
+
+  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.eventCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.eventCard h3 {
+  color: #1a3c6e;
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.eventCard p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* ------------------------------------------------------------
+   CTA BUTTON
+   ------------------------------------------------------------ */
+.cta-button {
+  display: inline-block;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 22px;        /* padding inside button */
+  margin-top: 5px;           /* margin outside button */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* ------------------------------------------------------------
+   FORM SECTION
+   ------------------------------------------------------------ */
+.form-section {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+
+  /* BORDER on the form section container */
+  border: 1px solid #c8d6e5;
+}
+
+.form-section h2 {
+  font-size: 1.4rem;
+  color: #1a3c6e;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #007BFF;
+}
+
+.form-group {
+  margin-bottom: 18px;       /* margin between form groups */
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;        /* margin below label */
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* INPUT & SELECT – outline on focus highlights the active field */
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 14px;        /* padding inside inputs */
+  border: 1.5px solid #c8d6e5;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #333;
+  background-color: #f9fbff;
+  transition: border-color 0.25s, outline 0.25s;
+}
+
+/* OUTLINE: appears on focus – distinct from border */
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #007BFF;
+  /* outline is drawn outside the border and does not affect layout */
+  outline: 3px solid rgba(0, 123, 255, 0.35);
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------
+   VISIBILITY DEMO SECTION
+   ------------------------------------------------------------ */
+.visibility-section {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin-bottom: 25px;
+  border: 1px solid #c8d6e5;
+}
+
+.visibility-section h2 {
+  font-size: 1.4rem;
+  color: #1a3c6e;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #007BFF;
+}
+
+.visibility-section > p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.visibility-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Base demo box styling */
+.demo-box {
+  padding: 16px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  border: 2px solid #007BFF;
+}
+
+/* Normal visible box */
+.visible-box {
+  background-color: #d6e8ff;
+  color: #1a3c6e;
+}
+
+/* visibility: hidden — invisible but SPACE IS PRESERVED in layout */
+.hidden-box {
+  background-color: #ffe4e4;
+  color: #c0392b;
+  visibility: hidden;        /* box is invisible, layout space kept */
+}
+
+/* display: none — element REMOVED ENTIRELY from document flow */
+.none-box {
+  background-color: #ffeeba;
+  display: none;             /* element does not exist in layout */
+}
+
+/* Key explaining the difference */
+.visibility-key {
+  background-color: #f0f4f8;
+  border-left: 4px solid #1a3c6e;
+  padding: 15px 20px;
+  border-radius: 6px;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.visibility-key p {
+  margin-bottom: 6px;
+}
+
+/* ------------------------------------------------------------
+   FOOTER
+   ------------------------------------------------------------ */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px;
+  font-size: 0.85rem;
+  color: #888;
+  border-top: 1px solid #dde3ea;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 11 – Debug & DevTools | Community Event Portal</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <!-- 
+    TASK 11 NOTE:
+    This file is intentionally designed to be inspected with Chrome DevTools.
+    Steps to test:
+      1. Open this file in Chrome
+      2. Press F12 or right-click → Inspect
+      3. Use the Device Toolbar (Ctrl+Shift+M) to simulate phones/tablets
+      4. Click elements to inspect their applied styles in the Styles panel
+      5. Live-edit CSS values directly in the DevTools panel
+      6. Check the Network tab — look for styles.css with status 200 (loaded)
+  -->
+</head>
+<body>
+
+  <header id="mainHeader">
+    <h1>Community Event Portal</h1>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- DevTools Checklist Guide Section -->
+  <main>
+
+    <section class="devtools-guide">
+      <h2>Task 11: DevTools & VS Code Debug Guide</h2>
+      <p class="intro-text">
+        Use this page to practise Chrome DevTools. Each panel below targets a
+        specific debugging or testing skill. Follow the steps outlined in each card.
+      </p>
+
+      <div class="guide-grid">
+
+        <!-- Card 1 -->
+        <div class="guide-card">
+          <div class="card-icon">🔍</div>
+          <h3>Inspect Elements &amp; Styles</h3>
+          <ol class="steps-list">
+            <li>Right-click any element on this page</li>
+            <li>Select <strong>Inspect</strong></li>
+            <li>The <em>Elements</em> panel shows the HTML structure</li>
+            <li>The <em>Styles</em> panel on the right shows all applied CSS rules</li>
+            <li>Try toggling a property checkbox to disable a style temporarily</li>
+            <li>Edit a value (e.g. change <code>color: red</code>) live</li>
+          </ol>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="guide-card">
+          <div class="card-icon">📱</div>
+          <h3>Device Toolbar (Responsive Testing)</h3>
+          <ol class="steps-list">
+            <li>Open DevTools (F12)</li>
+            <li>Click the <strong>Device Toolbar</strong> icon (or Ctrl+Shift+M)</li>
+            <li>Select a device preset: iPhone SE, iPad, Pixel 7, etc.</li>
+            <li>Resize by dragging the handles or typing a custom width</li>
+            <li>Observe how the navigation stacks vertically below 768px</li>
+            <li>Note how font sizes and card grids adapt to screen width</li>
+          </ol>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="guide-card">
+          <div class="card-icon">📦</div>
+          <h3>Box Model Inspector</h3>
+          <ol class="steps-list">
+            <li>Inspect the <code>.eventCard</code> below</li>
+            <li>In the Styles panel, scroll down to the <strong>Box Model</strong> diagram</li>
+            <li>Hover over each section (margin, border, padding, content) to highlight it</li>
+            <li>Click a value to edit it live — watch the card resize in real time</li>
+            <li>Use this to debug cramped or misaligned layouts</li>
+          </ol>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="guide-card">
+          <div class="card-icon">🌐</div>
+          <h3>Network Tab – Check CSS Load</h3>
+          <ol class="steps-list">
+            <li>Open DevTools → click the <strong>Network</strong> tab</li>
+            <li>Reload the page (Ctrl+R)</li>
+            <li>Filter by <strong>CSS</strong> using the filter buttons</li>
+            <li>Click <code>styles.css</code> in the list</li>
+            <li>Check the <em>Status</em> column — it should show <strong>200</strong></li>
+            <li>View the <em>Headers</em> and <em>Preview</em> tabs for details</li>
+          </ol>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="guide-card">
+          <div class="card-icon">🎨</div>
+          <h3>Live CSS Editing in DevTools</h3>
+          <ol class="steps-list">
+            <li>Select the <code>#mainHeader</code> element in the Elements panel</li>
+            <li>In Styles, click on the <code>background-color</code> value</li>
+            <li>Change it to <code>#c0392b</code> — the header turns red</li>
+            <li>These changes are temporary — refresh resets them</li>
+            <li>To keep changes, copy the CSS and paste into your <code>styles.css</code> in VS Code</li>
+          </ol>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="guide-card">
+          <div class="card-icon">🛠️</div>
+          <h3>VS Code Tips for CSS</h3>
+          <ol class="steps-list">
+            <li>Use <strong>Live Server</strong> extension for instant browser refresh on save</li>
+            <li>Use <strong>CSS Peek</strong> to jump to a class definition from HTML</li>
+            <li>Use <strong>IntelliSense</strong> for CSS autocomplete</li>
+            <li>Use the built-in <em>Problems</em> panel (Ctrl+Shift+M) for syntax errors</li>
+            <li>Format CSS with <strong>Prettier</strong> (right-click → Format Document)</li>
+            <li>Use Ctrl+F to search across files for a selector name</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Live test: an eventCard you can inspect in DevTools -->
+    <section class="live-test-section">
+      <h2>Live Test Element – Inspect Me!</h2>
+      <p class="intro-text">
+        Open DevTools and inspect the card below. Try editing its padding, border,
+        and background-color live in the Styles panel.
+      </p>
+
+      <div class="eventCard" id="debugCard">
+        <h3>Heritage Walk – Old Town District</h3>
+        <p class="event-meta">22 June 2026 | 8:00 AM | Old Town District</p>
+        <p>Join a guided walk through the historical lanes of the old town.
+           A certified heritage guide will narrate stories of the city's past.</p>
+        <a href="#" class="cta-button">Register Now</a>
+      </div>
+
+      <!-- Intentional debugging scenario: this card has a broken style to find -->
+      <div class="eventCard broken-card" id="brokenCard">
+        <h3>⚠️ Debug This Card</h3>
+        <p class="event-meta">Inspect this card – something is wrong with its layout!</p>
+        <p>Use DevTools to find out why this card looks different and fix it by
+           modifying the <code>.broken-card</code> rule in styles.css.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Community Event Portal — Task 11: DevTools &amp; Debug Practice</p>
+  </footer>
+
+</body>
+</html>

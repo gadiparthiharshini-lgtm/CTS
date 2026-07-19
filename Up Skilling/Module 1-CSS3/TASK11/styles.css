@@ -1,0 +1,308 @@
+/* ============================================================
+   Task 11: Debug and Test with DevTools and VS Code
+   This stylesheet is designed to be INSPECTED in Chrome DevTools.
+   
+   HOW TO TEST:
+   1. Open index.html in Chrome
+   2. Press F12 to open DevTools
+   3. Use the Device Toolbar (Ctrl+Shift+M) to test responsiveness
+   4. Inspect elements and try live-editing CSS values
+   5. Use the Network tab to verify this file loads (Status: 200)
+   ============================================================ */
+
+/* UNIVERSAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #eef2f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+#mainHeader {
+  background-color: #1a3c6e;
+  color: #fff;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+#mainHeader h1 {
+  font-size: 1.5rem;
+  padding: 15px 0;
+}
+
+/* NAV MENU */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+
+.nav-menu li a {
+  display: block;
+  color: rgba(255,255,255,0.88);
+  text-decoration: none;
+  padding: 22px 16px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: background-color 0.25s;
+}
+
+.nav-menu li a:hover {
+  background-color: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+/* ============================================================
+   MAIN CONTAINER
+   ============================================================ */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 5%;
+}
+
+/* ============================================================
+   DEVTOOLS GUIDE SECTION
+   ============================================================ */
+.devtools-guide {
+  margin-bottom: 40px;
+}
+
+.devtools-guide h2 {
+  font-size: 1.7rem;
+  color: #1a3c6e;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #007BFF;
+}
+
+.intro-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 25px;
+  max-width: 720px;
+  line-height: 1.7;
+}
+
+/* GUIDE GRID – CSS Grid layout */
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* GUIDE CARD */
+.guide-card {
+  background-color: #ffffff;
+  border: 1px solid #c8d6e5;
+  border-radius: 10px;
+  padding: 22px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.guide-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.guide-card h3 {
+  font-size: 1rem;
+  color: #1a3c6e;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+/* Ordered steps list inside guide cards */
+.steps-list {
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding-left: 18px;
+}
+
+.steps-list li {
+  font-size: 0.88rem;
+  color: #444;
+  padding: 4px 0;
+  line-height: 1.5;
+}
+
+.steps-list li strong {
+  color: #007BFF;
+}
+
+.steps-list li code {
+  background-color: #f0f4f8;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.83rem;
+  color: #c0392b;
+  font-family: 'Courier New', monospace;
+}
+
+/* ============================================================
+   LIVE TEST / EVENT CARDS SECTION
+   ============================================================ */
+.live-test-section {
+  margin-bottom: 30px;
+}
+
+.live-test-section h2 {
+  font-size: 1.5rem;
+  color: #1a3c6e;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #007BFF;
+}
+
+/* Standard event card for DevTools inspection */
+.eventCard {
+  background-color: #ffffff;
+  border: 2px solid #c5d3e0;
+  border-radius: 10px;
+  padding: 22px 26px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+.eventCard h3 {
+  color: #1a3c6e;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.event-meta {
+  font-size: 0.88rem;
+  color: #007BFF;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+}
+
+.eventCard p:not(.event-meta) {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+/* CTA BUTTON */
+.cta-button {
+  display: inline-block;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* ============================================================
+   BROKEN CARD – Intentional bug for DevTools debugging practice
+   Students should find and fix these issues using DevTools:
+     1. Wrong text colour (barely readable)
+     2. Excessive padding pushing content off
+     3. Overconstrained width
+   ============================================================ */
+.broken-card {
+  /* BUG 1: text colour too light – hard to read */
+  color: #ccc;
+  
+  /* BUG 2: excessive padding – content appears squished */
+  padding: 60px 80px;
+  
+  /* BUG 3: fixed narrow width – breaks layout */
+  width: 280px;
+  
+  background-color: #fff8e1;
+  border: 2px dashed #e74c3c;
+}
+
+/* ============================================================
+   RESPONSIVE MEDIA QUERIES
+   ============================================================ */
+@media (max-width: 1024px) {
+  .guide-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Stack header vertically */
+  #mainHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 5%;
+  }
+
+  #mainHeader h1 {
+    font-size: 1.2rem;
+    padding: 10px 0 5px;
+  }
+
+  /* Stack nav links vertically */
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .nav-menu li a {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  /* Guide grid: 1 column */
+  .guide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Fix broken card width on mobile too */
+  .broken-card {
+    width: 100%;
+  }
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  text-align: center;
+  padding: 20px 5%;
+  background-color: #1a3c6e;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.88rem;
+  margin-top: 20px;
+}

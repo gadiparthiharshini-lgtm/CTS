@@ -1,0 +1,170 @@
+/* ============================================================
+   Task 4: Color & Background Styling
+   Demonstrates: HEX, RGBA, background-image, linear-gradient
+   ============================================================ */
+
+/* UNIVERSAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------------------------------------------------------
+   BODY
+   Background image with fallback HEX colour
+   'no-repeat center center fixed' ensures it covers the viewport
+   ------------------------------------------------------------ */
+body {
+  /* Fallback background colour (HEX) shown if image fails to load */
+  background-color: #dce8f5;
+
+  /* Background image with positioning and size */
+  background-image: url('https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1600&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
+  /* RGBA text colour for body text (R:40, G:40, B:60, A:0.9) */
+  color: rgba(40, 40, 60, 0.9);
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* ------------------------------------------------------------
+   HEADER (ID selector)
+   HEX + RGBA colours for background and text
+   ------------------------------------------------------------ */
+#mainHeader {
+  /* HEX background */
+  background-color: #1a3c6e;
+  /* RGBA white text with slight transparency */
+  color: rgba(255, 255, 255, 0.95);
+  padding: 30px 40px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+#mainHeader h1 {
+  font-size: 2.2rem;
+  /* HEX colour */
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+#mainHeader p {
+  /* RGBA for subtle muted white */
+  color: rgba(220, 235, 255, 0.85);
+  font-size: 1rem;
+}
+
+/* ------------------------------------------------------------
+   SECTION HEADERS WITH LINEAR GRADIENTS
+   ------------------------------------------------------------ */
+
+/* Primary gradient: Blue → Teal */
+.section-gradient {
+  background: linear-gradient(135deg, #1a3c6e 0%, #007BFF 50%, #00c9a7 100%);
+  padding: 18px 30px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.section-gradient h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+/* Alternate gradient: Purple → Pink */
+.section-gradient-alt {
+  background: linear-gradient(135deg, #5e2a84 0%, #c0392b 100%);
+  padding: 18px 30px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.section-gradient-alt h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+/* ------------------------------------------------------------
+   MAIN CONTAINER
+   ------------------------------------------------------------ */
+main {
+  max-width: 900px;
+  margin: 0 auto 20px;
+}
+
+/* ------------------------------------------------------------
+   EVENT CARD
+   Uses RGBA for semi-transparent background (glassmorphism feel)
+   ------------------------------------------------------------ */
+.eventCard {
+  /* RGBA: white at 85% opacity for glass effect over the background image */
+  background-color: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(0, 123, 255, 0.25);
+  border-radius: 10px;
+  padding: 20px 25px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(4px);
+}
+
+.eventCard h3 {
+  /* HEX colour for heading */
+  color: #1a3c6e;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.eventCard p {
+  /* RGBA for muted paragraph text */
+  color: rgba(50, 50, 80, 0.8);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+/* Highlighted card with a warm RGBA background */
+.highlight-card {
+  background-color: rgba(255, 243, 205, 0.92);
+  border-left: 5px solid #f0a500;
+}
+
+/* ------------------------------------------------------------
+   CTA BUTTON
+   ------------------------------------------------------------ */
+.cta-button {
+  display: inline-block;
+  /* HEX background */
+  background-color: #007BFF;
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* ------------------------------------------------------------
+   FOOTER
+   Semi-transparent dark footer using RGBA
+   ------------------------------------------------------------ */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 15px;
+  /* RGBA dark footer */
+  background-color: rgba(20, 40, 80, 0.75);
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  font-size: 0.85rem;
+}

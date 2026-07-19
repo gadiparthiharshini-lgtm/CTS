@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <!-- viewport meta tag is ESSENTIAL for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 10 – Responsive Design | Community Event Portal</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- HEADER with horizontal nav (collapses to vertical on mobile) -->
+  <header id="mainHeader">
+    <div class="brand">
+      <h1>Community Event Portal</h1>
+    </div>
+    <!-- Navigation: horizontal on desktop, vertical on mobile -->
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Volunteer</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=1200&q=80"
+           alt="Community event" class="hero-image"/>
+      <div class="hero-text">
+        <h2>Discover Events Near You</h2>
+        <p>Join hundreds of free local events each month — for all ages and interests.</p>
+        <a href="#" class="cta-button">Browse Events</a>
+      </div>
+    </section>
+
+    <!-- EVENTS GRID: 3-col on desktop → 2-col on tablet → 1-col on mobile -->
+    <section class="events-section">
+      <h2>Upcoming Events</h2>
+      <div class="events-grid">
+
+        <div class="eventCard">
+          <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=400&q=70"
+               alt="Farmers Market" class="card-image"/>
+          <div class="card-content">
+            <h3>Farmers Market</h3>
+            <p class="event-meta">Every Saturday | Town Square</p>
+            <a href="#" class="cta-button">Learn More</a>
+          </div>
+        </div>
+
+        <div class="eventCard">
+          <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=400&q=70"
+               alt="Yoga in the Park" class="card-image"/>
+          <div class="card-content">
+            <h3>Yoga in the Park</h3>
+            <p class="event-meta">Sundays | 6:30 AM | Riverside Lawn</p>
+            <a href="#" class="cta-button">Join Free</a>
+          </div>
+        </div>
+
+        <div class="eventCard">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&q=70"
+               alt="Coding Bootcamp" class="card-image"/>
+          <div class="card-content">
+            <h3>Coding Bootcamp</h3>
+            <p class="event-meta">25 June | Tech Hub</p>
+            <a href="#" class="cta-button">Register</a>
+          </div>
+        </div>
+
+        <div class="eventCard">
+          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&q=70"
+               alt="Open Mic Night" class="card-image"/>
+          <div class="card-content">
+            <h3>Open Mic Night</h3>
+            <p class="event-meta">20 June | Community Hall</p>
+            <a href="#" class="cta-button">Book Seat</a>
+          </div>
+        </div>
+
+        <div class="eventCard">
+          <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=400&q=70"
+               alt="Music Festival" class="card-image"/>
+          <div class="card-content">
+            <h3>Monsoon Music Fest</h3>
+            <p class="event-meta">2 July | Open Amphitheatre</p>
+            <a href="#" class="cta-button">Buy Tickets</a>
+          </div>
+        </div>
+
+        <div class="eventCard">
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&q=70"
+               alt="Heritage Walk" class="card-image"/>
+          <div class="card-content">
+            <h3>Heritage Walk</h3>
+            <p class="event-meta">22 June | Old Town District</p>
+            <a href="#" class="cta-button">Join Walk</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Local Community Portal — Built with Responsive CSS</p>
+  </footer>
+
+</body>
+</html>

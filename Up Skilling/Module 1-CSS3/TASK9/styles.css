@@ -1,0 +1,214 @@
+/* ============================================================
+   Task 9: Multiple Columns in Text (Newspaper Layout)
+   Demonstrates: column-count, column-gap, column-rule
+   ============================================================ */
+
+/* UNIVERSAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background-color: #faf6f0;        /* warm cream – newspaper feel */
+  color: #222;
+  padding: 20px;
+}
+
+/* ------------------------------------------------------------
+   HEADER – Newspaper masthead
+   ------------------------------------------------------------ */
+#mainHeader {
+  border-top: 5px solid #111;
+  border-bottom: 3px solid #111;
+  text-align: center;
+  padding: 18px 20px;
+  margin-bottom: 30px;
+  background-color: #fff;
+}
+
+.header-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.edition {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #666;
+  font-family: Arial, sans-serif;
+}
+
+#mainHeader h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #111;
+  font-family: 'Georgia', serif;
+  line-height: 1.1;
+}
+
+.tagline {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* ------------------------------------------------------------
+   MAIN CONTAINER
+   ------------------------------------------------------------ */
+main {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------------------------
+   NEWS ARTICLE WRAPPER
+   ------------------------------------------------------------ */
+.news-article {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 28px 32px;
+  margin-bottom: 30px;
+}
+
+/* Article headline */
+.article-title {
+  font-family: 'Georgia', serif;
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: #111;
+  line-height: 1.2;
+  margin-bottom: 6px;
+  border-bottom: 2px solid #111;
+  padding-bottom: 10px;
+}
+
+/* Byline */
+.article-byline {
+  font-family: Arial, sans-serif;
+  font-size: 0.82rem;
+  color: #777;
+  margin-bottom: 18px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------
+   MULTI-COLUMN LAYOUT – Article Body
+   ------------------------------------------------------------ */
+
+/* TWO-COLUMN LAYOUT */
+.two-col {
+  column-count: 2;                  /* split text into 2 columns */
+  column-gap: 30px;                 /* gap between columns */
+  column-rule: 1px solid gray;      /* vertical divider between columns */
+}
+
+/* THREE-COLUMN LAYOUT */
+.three-col {
+  column-count: 3;                  /* split text into 3 columns */
+  column-gap: 24px;                 /* narrower gap for 3 columns */
+  column-rule: 1px solid #ccc;      /* lighter rule for 3-col */
+}
+
+/* Article body paragraphs */
+.article-body p {
+  font-size: 0.97rem;
+  line-height: 1.8;
+  text-align: justify;              /* justified text for newspaper look */
+  margin-bottom: 12px;
+  color: #222;
+}
+
+/* Prevent orphaned headings inside columns */
+.article-body p:first-child {
+  margin-top: 0;
+}
+
+/* ------------------------------------------------------------
+   SECTION DIVIDER
+   ------------------------------------------------------------ */
+.section-divider {
+  border: none;
+  border-top: 2px solid #111;
+  margin: 10px 0 30px;
+}
+
+/* ------------------------------------------------------------
+   NOTICES SECTION
+   ------------------------------------------------------------ */
+.notices-section {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 25px 32px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.section-heading {
+  font-family: 'Georgia', serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #111;
+  padding-bottom: 10px;
+  margin-bottom: 18px;
+  color: #111;
+}
+
+.notices-body p {
+  font-family: Arial, sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  text-align: left;
+  color: #333;
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 8px;
+}
+
+.notices-body p:last-child {
+  border-bottom: none;
+}
+
+/* ------------------------------------------------------------
+   FOOTER
+   ------------------------------------------------------------ */
+footer {
+  text-align: center;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  color: #888;
+  border-top: 2px solid #111;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+/* ------------------------------------------------------------
+   RESPONSIVE: collapse to 1 column on small screens
+   ------------------------------------------------------------ */
+@media (max-width: 600px) {
+  .two-col,
+  .three-col {
+    column-count: 1;
+    column-gap: 0;
+    column-rule: none;
+  }
+
+  #mainHeader h1 {
+    font-size: 2rem;
+  }
+
+  .article-title {
+    font-size: 1.3rem;
+  }
+}

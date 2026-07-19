@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 1 – CSS Inclusion Methods | Community Event Portal</title>
+
+  <!-- METHOD 2: Internal / Embedded <style> tag -->
+  <style>
+    /* Body background – defined via internal style tag */
+    body {
+      background-color: #f0f4f8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #1a3c6e;
+      color: #ffffff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    /* Section styles */
+    section {
+      background-color: #ffffff;
+      border: 1px solid #dde3ea;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Paragraph styles */
+    p {
+      line-height: 1.7;
+      color: #333;
+    }
+  </style>
+
+  <!-- METHOD 3: External stylesheet link -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <!-- METHOD 1: Inline style to make this heading red -->
+    <h1 style="color: red; margin: 0;">Local Community Event Portal</h1>
+    <p style="margin: 5px 0 0;">Welcome to your neighbourhood's event hub.</p>
+  </header>
+
+  <section>
+    <h2>Upcoming Events</h2>
+    <p>
+      Browse the latest events organised by your local council and community groups.
+      All events are free to attend unless stated otherwise.
+    </p>
+  </section>
+
+  <section>
+    <h2>How CSS Methods Work</h2>
+    <ul>
+      <li><strong>Inline:</strong> The red &lt;h1&gt; above uses <code>style="color:red"</code> directly on the tag.</li>
+      <li><strong>Internal:</strong> The body background (#f0f4f8) is set via a &lt;style&gt; tag in &lt;head&gt;.</li>
+      <li><strong>External:</strong> Reusable styles (cards, buttons) live in <code>styles.css</code>, linked above.</li>
+    </ul>
+  </section>
+
+  <!-- This card uses a class defined in styles.css (external) -->
+  <div class="eventCard">
+    <h3>Community Clean-Up Day</h3>
+    <p>Date: 22 June 2026 | Venue: Central Park</p>
+    <a href="#" class="cta-button">Register Now</a>
+  </div>
+
+</body>
+</html>

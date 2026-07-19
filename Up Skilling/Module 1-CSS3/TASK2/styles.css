@@ -1,0 +1,141 @@
+/* ============================================================
+   styles.css – Local Community Event Portal
+   Task 2: Clean CSS Syntax with Descriptive Comments
+   Author: CTS Upskilling | Module 2
+   ============================================================ */
+
+
+/* ============================================================
+   RESET & BASE STYLES
+   Removes default browser spacing for consistency
+   ============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base body styling: sets font, background, and text colour */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #333333;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   HEADER / BANNER
+   Top section with site title and tagline
+   ============================================================ */
+#mainHeader {
+  background-color: #1a3c6e;
+  color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+/* Main heading inside the banner */
+#mainHeader h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+/* Tagline below the banner heading */
+#mainHeader p {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-top: 6px;
+}
+
+
+/* ============================================================
+   SECTION INTRO
+   Introductory paragraph section below the header
+   ============================================================ */
+.section-intro {
+  background-color: #ffffff;
+  border-left: 5px solid #007BFF;
+  padding: 20px 25px;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+
+/* Section heading style */
+.section-intro h2 {
+  font-size: 1.4rem;
+  color: #1a3c6e;
+  margin-bottom: 10px;
+}
+
+
+/* ============================================================
+   EVENT CARD
+   Card component used to display individual events
+   ============================================================ */
+.eventCard {
+  background-color: #ffffff;
+  border: 1px solid #c8d6e5;
+  border-radius: 10px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease;
+}
+
+/* Lift card slightly on hover for interactivity feel */
+.eventCard:hover {
+  transform: translateY(-3px);
+}
+
+/* Event title inside the card */
+.eventCard h3 {
+  color: #1a3c6e;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+/* Event meta details (date, time, venue) */
+.eventCard p {
+  font-size: 0.95rem;
+  color: #555555;
+}
+
+
+/* ============================================================
+   CTA BUTTON
+   Style for main Call-To-Action button used on event cards
+   ============================================================ */
+.cta-button {
+  display: inline-block;
+  background-color: #007BFF;
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 12px;
+  transition: background-color 0.3s ease;
+}
+
+/* Darker shade on hover for clear visual feedback */
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+
+/* ============================================================
+   FOOTER
+   Bottom bar with copyright info
+   ============================================================ */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 15px;
+  font-size: 0.85rem;
+  color: #888888;
+  border-top: 1px solid #dde3ea;
+}

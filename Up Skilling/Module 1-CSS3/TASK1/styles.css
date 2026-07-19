@@ -1,0 +1,36 @@
+/* ============================================
+   styles.css – Local Community Event Portal
+   External Stylesheet (Task 1)
+   ============================================ */
+
+/* ----- Event Card Styles ----- */
+.eventCard {
+  background-color: #ffffff;
+  border: 2px solid #1a3c6e;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.eventCard h3 {
+  color: #1a3c6e;
+  margin-top: 0;
+}
+
+/* ----- CTA Button Styles ----- */
+.cta-button {
+  display: inline-block;
+  background-color: #007BFF;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}

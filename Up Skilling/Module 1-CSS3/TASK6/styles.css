@@ -1,0 +1,240 @@
+/* ============================================================
+   Task 6: Link and List Styling
+   Demonstrates: :link, :hover, :active, :visited pseudo-classes,
+   list-style-type, list-style-position, nav menu without bullets
+   ============================================================ */
+
+/* UNIVERSAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  padding: 20px;
+}
+
+/* ------------------------------------------------------------
+   HEADER
+   ------------------------------------------------------------ */
+#mainHeader {
+  background-color: #1a3c6e;
+  color: #fff;
+  padding: 0 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+#mainHeader h1 {
+  font-size: 1.9rem;
+  padding: 15px 0 20px;
+}
+
+/* ------------------------------------------------------------
+   NAV MENU – Remove bullets, display horizontally
+   ------------------------------------------------------------ */
+.nav-menu {
+  list-style-type: none;         /* removes bullet points */
+  list-style-position: inside;   /* (shown for reference – overridden by 'none') */
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.nav-menu li {
+  padding: 0;                    /* reset padding on li */
+  margin: 0;
+}
+
+/* Nav link – unvisited state (:link) */
+.nav-menu li a:link {
+  display: block;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  padding: 14px 18px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+/* Nav link – visited state (:visited) */
+.nav-menu li a:visited {
+  color: rgba(200, 220, 255, 0.85);
+}
+
+/* Nav link – hover state (:hover) */
+.nav-menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* Nav link – active state (:active) – when clicked */
+.nav-menu li a:active {
+  background-color: rgba(0, 123, 255, 0.4);
+  color: #ffffff;
+}
+
+/* ------------------------------------------------------------
+   MAIN & CONTENT SECTIONS
+   ------------------------------------------------------------ */
+main {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.content-section {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.content-section h2 {
+  font-size: 1.4rem;
+  color: #1a3c6e;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #007BFF;
+}
+
+/* ------------------------------------------------------------
+   ORDERED EVENT LIST
+   ------------------------------------------------------------ */
+.event-list-ordered {
+  list-style-type: decimal;         /* numbered list */
+  list-style-position: inside;      /* marker inside content box */
+  padding-left: 5px;
+}
+
+.event-list-ordered li {
+  padding: 10px 0;                  /* padding between list items */
+  margin-bottom: 5px;               /* margin between list items */
+  border-bottom: 1px dashed #dde3ea;
+  font-size: 1rem;
+  color: #444;
+}
+
+.event-list-ordered li:last-child {
+  border-bottom: none;
+}
+
+/* Links inside ordered list – :link state */
+.event-list-ordered li a:link {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* :visited state */
+.event-list-ordered li a:visited {
+  color: #6a0dad;
+}
+
+/* :hover state */
+.event-list-ordered li a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* :active state */
+.event-list-ordered li a:active {
+  color: #c0392b;
+}
+
+.event-date {
+  font-size: 0.88rem;
+  color: #888;
+  margin-left: 5px;
+}
+
+/* ------------------------------------------------------------
+   UNORDERED QUICK LINKS LIST
+   ------------------------------------------------------------ */
+.quick-links {
+  list-style-type: square;          /* square bullets */
+  list-style-position: outside;     /* bullet sits outside the text block */
+  padding-left: 25px;               /* indent to show the bullets */
+}
+
+.quick-links li {
+  padding: 8px 0;                   /* vertical padding between items */
+  margin-bottom: 4px;
+}
+
+/* :link */
+.quick-links li a:link {
+  color: #1a3c6e;
+  text-decoration: none;
+  font-size: 0.97rem;
+}
+
+/* :visited */
+.quick-links li a:visited {
+  color: #555;
+}
+
+/* :hover */
+.quick-links li a:hover {
+  color: #007BFF;
+  text-decoration: underline;
+  padding-left: 4px;
+  transition: padding-left 0.2s;
+}
+
+/* :active */
+.quick-links li a:active {
+  color: #e74c3c;
+}
+
+/* ------------------------------------------------------------
+   EXTERNAL / INLINE LINKS
+   ------------------------------------------------------------ */
+
+/* :link */
+a.external-link:link {
+  color: #007BFF;
+  font-weight: 600;
+  text-decoration: underline dotted;
+}
+
+/* :visited */
+a.external-link:visited {
+  color: #8e44ad;
+}
+
+/* :hover */
+a.external-link:hover {
+  color: #0056b3;
+  text-decoration: underline solid;
+}
+
+/* :active */
+a.external-link:active {
+  color: #c0392b;
+}
+
+/* ------------------------------------------------------------
+   FOOTER LINK
+   ------------------------------------------------------------ */
+a.footer-link:link    { color: #aaa; text-decoration: none; }
+a.footer-link:visited { color: #888; }
+a.footer-link:hover   { color: #fff; text-decoration: underline; }
+a.footer-link:active  { color: #007BFF; }
+
+/* ------------------------------------------------------------
+   FOOTER
+   ------------------------------------------------------------ */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #1a3c6e;
+  color: #ccc;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 8 – Box Model & Layout | Community Event Portal</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <header id="mainHeader">
+    <h1>Local Community Event Portal</h1>
+    <p>Box Model &amp; Layout Control Demo</p>
+  </header>
+
+  <main>
+
+    <!-- ===== BOX MODEL DEMO SECTION ===== -->
+    <section class="box-demo-section">
+      <h2>Box Model Explained</h2>
+      <div class="box-model-visual">
+        <p>
+          This box demonstrates <strong>margin</strong> (outer space),
+          <strong>border</strong> (visible edge), <strong>padding</strong> (inner space),
+          and <strong>content</strong> (text here). Inspect it in DevTools!
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== EVENT CARDS SECTION ===== -->
+    <section class="events-section">
+      <h2>Featured Events</h2>
+
+      <div class="eventCard">
+        <h3>Eco Awareness Camp</h3>
+        <p>25 June 2026 | 9:00 AM – 4:00 PM | Green Park</p>
+        <a href="#" class="cta-button">Register</a>
+      </div>
+
+      <div class="eventCard">
+        <h3>Digital Skills for Seniors</h3>
+        <p>28 June 2026 | 11:00 AM | Community Centre</p>
+        <a href="#" class="cta-button">Book a Seat</a>
+      </div>
+    </section>
+
+    <!-- ===== FORM SECTION with outline on focus ===== -->
+    <section class="form-section">
+      <h2>Register for an Event</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your name"/>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Enter your email"/>
+        </div>
+        <div class="form-group">
+          <label for="event">Select Event</label>
+          <select id="event">
+            <option>-- Choose an Event --</option>
+            <option>Eco Awareness Camp</option>
+            <option>Digital Skills for Seniors</option>
+            <option>Open Mic Night</option>
+          </select>
+        </div>
+        <button type="submit" class="cta-button">Submit Registration</button>
+      </form>
+    </section>
+
+    <!-- ===== VISIBILITY DEMO ===== -->
+    <section class="visibility-section">
+      <h2>visibility: hidden vs display: none</h2>
+      <p>The two boxes below demonstrate the difference:</p>
+
+      <div class="visibility-demo">
+        <div class="demo-box visible-box">I am visible (normal flow)</div>
+        <!-- visibility: hidden — still takes up space, but invisible -->
+        <div class="demo-box hidden-box">This is hidden (visibility: hidden) — space preserved</div>
+        <!-- display: none — removed from layout entirely -->
+        <div class="demo-box none-box">This is removed (display: none) — no space</div>
+        <div class="demo-box visible-box">I am also visible — notice the gap above me</div>
+      </div>
+
+      <div class="visibility-key">
+        <p><strong style="color:#007BFF;">visibility: hidden</strong> → element is invisible but still occupies space in the layout.</p>
+        <p><strong style="color:#e74c3c;">display: none</strong> → element is completely removed from the document flow.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Local Community Portal – Box Model Demo</p>
+  </footer>
+
+</body>
+</html>
