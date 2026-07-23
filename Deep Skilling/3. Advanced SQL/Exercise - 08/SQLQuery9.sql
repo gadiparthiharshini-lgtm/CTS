@@ -1,0 +1,26 @@
+CREATE TABLE AuditLog
+(
+    LogID INT IDENTITY(1,1) PRIMARY KEY,
+    Action VARCHAR(100),
+    ErrorMessage VARCHAR(4000),
+    ActionDate DATETIME DEFAULT GETDATE()
+);
+GO
+
+ALTER TABLE Employees
+ADD Email VARCHAR(100) UNIQUE;
+GO
+SELECT * FROM AuditLog;
+SELECT DB_NAME() AS CurrentDatabase;
+USE CTS_DeepSkilling;
+GO
+
+CREATE TABLE AuditLog
+(
+    LogID INT IDENTITY(1,1) PRIMARY KEY,
+    Action VARCHAR(100),
+    ErrorMessage VARCHAR(4000),
+    ActionDate DATETIME DEFAULT GETDATE()
+);
+GO
+SELECT DB_NAME() AS CurrentDatabase;

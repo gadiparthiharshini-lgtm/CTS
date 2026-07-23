@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../../../../../../../Parent project code/Parent project code/ConverterLib/ConverterLib.Tests/ConverterLib.Tests.csproj" />
+  <Project Path="../../../../../../../Parent project code/Parent project code/ConverterLib/ConverterLib/ConverterLib.csproj" />
+</Solution>

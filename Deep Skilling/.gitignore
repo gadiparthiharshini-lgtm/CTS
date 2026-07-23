@@ -21,3 +21,8 @@ TestResults/
 # NuGet
 *.nupkg
 packages/
+
+# Node.js dependencies and build output
+node_modules/
+dist/
+coverage/
