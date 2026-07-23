@@ -1,0 +1,93 @@
+<div class="registration-container">
+
+    <h2>Student Registration</h2>
+
+    <form #studentForm="ngForm" (ngSubmit)="onSubmit()">
+
+        <!-- Student Name -->
+        <label>Student Name</label>
+
+        <input
+            type="text"
+            name="name"
+            [(ngModel)]="student.name"
+            #name="ngModel"
+            required
+            minlength="3">
+
+        <div *ngIf="name.invalid && (name.touched || studentForm.submitted)">
+
+            <small *ngIf="name.errors?.['required']" style="color:red;">
+                Student name is required.
+            </small>
+
+            <small *ngIf="name.errors?.['minlength']" style="color:red;">
+                Name must contain at least 3 characters.
+            </small>
+
+        </div>
+
+        <br>
+
+        <!-- Email -->
+        <label>Email</label>
+
+        <input
+            type="email"
+            name="email"
+            [(ngModel)]="student.email"
+            #email="ngModel"
+            required
+            pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$">
+
+        <div *ngIf="email.invalid && (email.touched || studentForm.submitted)">
+
+            <small *ngIf="email.errors?.['required']" style="color:red;">
+                Email is required.
+            </small>
+
+            <small *ngIf="email.errors?.['pattern']" style="color:red;">
+                Email must be a valid Gmail address (example@gmail.com)
+            </small>
+
+        </div>
+
+        <br>
+
+        <!-- Course -->
+        <label>Course</label>
+
+        <select
+            name="course"
+            [(ngModel)]="student.course"
+            #course="ngModel"
+            required>
+
+            <option value="">Select Course</option>
+            <option>Angular</option>
+            <option>ASP.NET Core</option>
+            <option>SQL Server</option>
+
+        </select>
+
+        <div *ngIf="course.invalid && (course.touched || studentForm.submitted)">
+
+            <small style="color:red;">
+                Please select a course.
+            </small>
+
+        </div>
+
+        <br><br>
+
+        <button
+            type="submit"
+            [disabled]="studentForm.invalid">
+
+            Register
+
+        </button>
+
+    </form>
+
+</div>

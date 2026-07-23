@@ -1,0 +1,37 @@
+<div *ngIf="course; else notFound" class="course-detail">
+
+    <h2>{{ course.name }}</h2>
+
+    <p>
+        <strong>Credits:</strong>
+        {{ course.credits }}
+    </p>
+
+    <p>
+        <strong>Fee:</strong>
+        {{ course.fee | currency:'INR' }}
+    </p>
+
+    <p>
+        <strong>Start Date:</strong>
+        {{ course.startDate | date:'dd/MM/yyyy' }}
+    </p>
+
+    <p>
+        <strong>Status:</strong>
+        {{ course.gradeStatus | titlecase }}
+    </p>
+
+</div>
+
+<ng-template #notFound>
+
+    <div class="course-detail">
+
+        <h2>❌ Course Not Found</h2>
+
+        <p>The requested course does not exist.</p>
+
+    </div>
+
+</ng-template>

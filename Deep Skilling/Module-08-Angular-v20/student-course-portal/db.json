@@ -1,0 +1,42 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Angular",
+      "code": "ANG101",
+      "credits": 4,
+      "gradeStatus": "passed",
+      "fee": 12000
+    },
+    {
+      "id": 2,
+      "name": "ASP.NET Core",
+      "code": "ASP201",
+      "credits": 3,
+      "gradeStatus": "pending",
+      "fee": 10000
+    },
+    {
+      "id": 3,
+      "name": "SQL Server",
+      "code": "SQL301",
+      "credits": 4,
+      "gradeStatus": "failed",
+      "fee": 8000
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "Prahllad Reddy",
+      "email": "reddyprahllad3106@gmail.com"
+    }
+  ],
+  "enrollments": [
+    {
+      "id": 1,
+      "studentId": 1,
+      "courseId": 1
+    }
+  ]
+}
